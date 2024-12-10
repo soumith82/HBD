@@ -182,36 +182,11 @@ footer {
 
     <!-- JavaScript -->
     <script>
-        const targetDate = new Date("Sep 14, 2024 00:00:00").getTime();
-    
-        function startTimer() {
-            const now = new Date().getTime();
-            const timeDifference = targetDate - now;
-    
-            if (timeDifference <= 0) {
+       
                 // Redirect to index3.html if the target date has passed
                 window.location.href = 'index3.html';
                 return; // Exit the function to stop further execution
-            }
-    
-            // Calculate the time components
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-    
-            // Pad numbers to ensure two digits
-            document.querySelector("#day").innerHTML = days;
-            document.querySelector("#hour").innerHTML = String(hours).padStart(2, '0');
-            document.querySelector("#min").innerHTML = String(minutes).padStart(2, '0');
-            document.querySelector("#sec").innerHTML = String(seconds).padStart(2, '0');
-        }
-    
-        // Run the timer every second
-        const timerInterval = setInterval(startTimer, 1000);
-    
-        // Check immediately if the target date has already passed
-        startTimer();
+         
     </script>
 <footer>
     <p><U>BY: J.V.SOUMITH</U></p>
